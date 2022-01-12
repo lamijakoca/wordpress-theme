@@ -4,7 +4,7 @@
             <div class="hero-text">
                 <h1>STEM Games for Kids</h1>
                 <p>What exactly is STEM, and why should you care about it?</p>
-                <a href="#" class="btn btn-border">Learn more</a>
+                <a href="#row" class="btn btn-border">Learn more</a>
             </div>
         </div>
     </div>
@@ -13,11 +13,18 @@
         <section class="site-section section-services gray-bg text-center">
             <div class="container">
                 <h2 class="heading-separator">Our Services</h2>
-                <p class="subheading-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <div class="row">
+                <p class="subheading-text">
+                STEM educational toys and games are ideal for 
+                introducing your little scientist to STEM concepts 
+                including logic, experimentation and problem-solving 
+                through play. Children are naturally curious about 
+                themselves and the world and learn by exploring and doing. 
+                Take your child on a STEM learning adventure! 
+                Play our STEM educational games today.
+                </p>
+                <div class="row" id="row">
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
-                            <img src="assets/img/anchor.svg" alt="">
                             <h3 class="service-title">Science</h3>
                             <p class="service-info">
                                 Science is vitally important in issues 
@@ -30,7 +37,6 @@
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
-                            <img src="assets/img/bycicle.svg" alt="">
                             <h3 class="service-title">Technology</h3>
                             <p class="service-info">
                             Technology has evolved into such a critical 
@@ -44,7 +50,7 @@
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
-                            <img src="assets/img/paper-plane.svg" alt="">
+                            <!-- <img src="assets/img/paper-plane.svg" alt=""> -->
                             <h3 class="service-title">Engineering</h3>
                             <p class="service-info">
                             Engineering helps to keep our entire world 
@@ -61,7 +67,7 @@
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
-                            <img src="assets/img/photo.svg" alt="">
+                            <!-- <img src="assets/img/photo.svg" alt=""> -->
                             <h3 class="service-title">Mathematics</h3>
                             <p class="service-info">
                             Mathematics might not be the favorite 
@@ -93,10 +99,4 @@
         </section>
 
     </main>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
-    <!-- <script src="/js/bootstrap.min.js"></script> -->
-    <!-- <script src="/js/jquery.slicknav.min.js"></script> -->
-    <!-- <script src="/js/jquery.countTo.min.js"></script> -->
-    <!-- <script src="/js/jquery.shuffle.min.js"></script> -->
-    <!-- <script src="/wp-content/themes/LuckyTheme/js/script.js"></script> -->
 <?php get_footer(); ?>
