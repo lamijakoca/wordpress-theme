@@ -10,11 +10,11 @@
     add_action('wp_enqueue_scripts', 'lucky_load_stylesheets');
 
     function lucky_register_scripts(){
-        wp_enqueue_script('lucky-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js');
-        wp_enqueue_script('lucky-nav', get_template_directory_uri() . '/js/jquery.slicknav.min.js');
-        wp_enqueue_script('lucky-count', get_template_directory_uri() . '/js/jquery.countTo.min.js');
-        wp_enqueue_script('lucky-shuffle', get_template_directory_uri() . '/js/jquery.shuffle.min.js');
-        wp_enqueue_script('lucky-main', get_template_directory_uri() . '/js/script.js');
+        wp_enqueue_script('lucky-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), false, true);
+        wp_enqueue_script('lucky-nav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), false, true);
+        wp_enqueue_script('lucky-count', get_template_directory_uri() . '/js/jquery.countTo.min.js', array('jquery'), false, true);
+        wp_enqueue_script('lucky-shuffle', get_template_directory_uri() . '/js/jquery.shuffle.min.js', array('jquery'), false, true);
+        wp_enqueue_script('lucky-main', get_template_directory_uri() . '/js/script.js', array(), false, true);
         wp_enqueue_script('lucky-ajax','https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js');
     }
     
