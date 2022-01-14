@@ -6,13 +6,13 @@
             </div>
             <div class="col-6 col-md-4">
                 <h6> KEEP IN TOUCH </h6>
-                <a> incognito@hotmail.com </a>
+                <a>Email: incognito@hotmail.com </a>
                 <br>
-                <a> +381 800 000 </a>
+                <a>Phone: +381 800 000 </a>
                 <br>
-                <a> +381 900 000 </a>
+                <a>Phone: +381 900 000 </a>
                 <br>
-                <a> Novi Pazar, 36300 </a>
+                <a>Address: Novi Pazar, 36300 </a>
             </div>
             <div class="col-6 col-md-4">
                 <h6> FEATURED LINKS </h6>

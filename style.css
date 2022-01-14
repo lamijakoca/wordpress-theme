@@ -7,9 +7,21 @@ Author: Incognito
     margin: 0;
     padding: 0;
 }
+.wp-content{
+    width: 1250px;
+    height: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    float: none;
+    text-align: center;
+    justify-content: center;
+}
+
 .col-6 .col-md-4{
     text-align: center;
 }
+
 #primary-error{
     position: absolute;
     width: 350px;
