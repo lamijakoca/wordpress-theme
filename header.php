@@ -5,7 +5,6 @@
     <style>
     .topnav {
     overflow: hidden;
-    /* background-color: #fff; */
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -39,12 +38,20 @@
 
     <?php wp_head();?>
 </head>
-<body>
+<body <?php body_class();?>>
     <header id="masthead" class="site-header">
         <div class="topnav">
             <a class="active" href="http://localhost/wordpress/">Home</a>
-            <a href="404.php">News</a>
             <a href="#site-footer">Contact</a>
             <a href="http://localhost/wordpress/games/">Games</a>
+        </div>
+
+        <div>
+            <!-- <h3> <?php the_title(); ?> </h3>  -->
+            <div class="wp-content">
+            <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+                <?php the_content(); ?>
+            <?php endwhile; endif; ?>
+            </div>
         </div>
     </header>
