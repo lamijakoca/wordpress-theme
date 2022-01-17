@@ -7,9 +7,10 @@ Author: Incognito
     margin: 0;
     padding: 0;
 }
+
 .wp-content{
     width: 1250px;
-    height: 1500px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
@@ -741,7 +742,7 @@ html, body {
 ================================================== */
 .site-header {
     position: absolute;
-    padding: 50px 0 0;
+    padding: 25px 0 0;
     background-color: transparent;
     width: 100%;
     z-index: 3;

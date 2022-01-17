@@ -4,7 +4,6 @@
             <div class="hero-text">
                 <h1>STEM Games for Kids</h1>
                 <p>What exactly is STEM, and why should you care about it?</p>
-                <a href="#row" class="btn btn-border">Learn more</a>
             </div>
         </div>
     </div>

@@ -9,6 +9,18 @@
 
     add_action('wp_enqueue_scripts', 'lucky_load_stylesheets');
 
+    function lucky_menus(){
+        
+        $locations = array(
+            'primary' => "Lucky Primary Menu",
+            'footer' => "Footer Menu Items"
+        );
+
+        register_nav_menus($locations);
+    }
+
+    add_action('init','lucky_menus');
+
     function lucky_register_scripts(){
         wp_enqueue_script('lucky-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), false, true);
         wp_enqueue_script('lucky-nav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), false, true);

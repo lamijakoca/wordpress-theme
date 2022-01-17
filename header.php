@@ -29,6 +29,9 @@
     color: green;
     text-decoration: none;
     }
+    .um {
+    opacity: 1 !important;
+    }
     </style>
 
     <title>STEM GAMES</title>
@@ -41,14 +44,56 @@
 <body <?php body_class();?>>
     <header id="masthead" class="site-header">
         <div class="topnav">
-            <a class="active" href="http://localhost/wordpress/">Home</a>
-            <a href="#site-footer">Contact</a>
-            <a href="http://localhost/wordpress/games/">Games</a>
+            
+            <?php
+                wp_nav_menu(
+                    array(
+                        'menu' => 'primary',
+                        'container' => '',
+                        'theme_location' => 'primary',
+                        'items_wrap' => '<ul id="" class="topnav" style="list-style-type: none;">%3$s</ul>'
+                    )
+                );
+            ?>
+
         </div>
 
         <div>
             <!-- <h3> <?php the_title(); ?> </h3>  -->
             <div class="wp-content">
+                <?php
+                    require "database.php";
+
+                    $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+
+                    $splitted = explode("/", $url);
+                    
+                    if($splitted[4] === 'games') {
+                        // Posaljes request u bazu da inkrementira
+                        // broj igranja animal kingdom za 1
+                        if($splitted[5] !== "") {
+                            $gameName = "";
+
+                            if($splitted[5] === 'animalkingdom-2') {
+                                $gameName = "Animal Kingdom";
+                            } else if($splitted[5] === 'match-colors') {
+                                $gameName = "Match Colors";
+                            } else if($splitted[5] === 'math-under-pressure') {
+                                $gameName = "Math Under Pressure";
+                            }
+
+                            $query = "UPDATE games SET plays = plays + 1 WHERE name = '$gameName'";
+
+                            $incrementGameQuery = mysqli_query($CONNECTION, $query);
+
+                            if($incrementGameQuery) {
+                                // Proslo
+                            } else {
+                                // Nije proslo
+                            }
+                        }
+                    }
+                ?>
             <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
                 <?php the_content(); ?>
             <?php endwhile; endif; ?>
