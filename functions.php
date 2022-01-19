@@ -32,4 +32,10 @@
     
     add_action('wp_enqueue_scripts', 'lucky_register_scripts');
 
+    function search_form_text($text){
+        $text = str_replace('value="Претражи"', 'value="Search"', $text);
+        return $text;
+    }
+
+    add_filter('get_search_form', 'search_form_text');
 ?>
